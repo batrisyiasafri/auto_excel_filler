@@ -1,0 +1,14 @@
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}?v=1.0">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Welcome to your Dashboard, {{ current_user.username }}!</h1>
+    <p>This is a simple dashboard page.</p>
+    <nav>
+      <a class="btn" href="{{ url_for('form') }}">Auto Filler Excel</a>
+      <a class="btn logout" href="{{ url_for('logout') }}">Logout</a>
+    </nav>
+  </div>
+</body>

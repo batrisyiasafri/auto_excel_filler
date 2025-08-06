@@ -1,0 +1,90 @@
+Text to Excel Converter
+
+This Python script reads a plain text file and converts each line into a new row in an Excel spreadsheet (.xlsx).
+
+How to use, auto excel filler using python script: v1
+
+1. Install Python from https://python.org 
+2. Install the required library: pip install openpyxl
+3. Place your data in input.txt (comma-separated, one row per line)
+4. Run the script: python main_script.py
+
+files included:
+- main_script.py (the script)
+- input.txt (sample input)
+- how_to_use.txt (this file)
+
+How to use, auto excel filler using python script: v2
+
+1.Install `openpyxl` via terminal == pip install openpyxl
+
+newly added features:
+- reads lines from any `.txt` file.
+- saves the content as an Excel file.
+- handles common errors like missing files or permission issues.
+- supports command-line arguments or interactive input.
+
+requirements:
+- python 3.7 or newer
+- [openpyxl](https://openpyxl.readthedocs.io/en/stable/) library
+
+files included:
+- main_script1.py (the script with the newly added features)
+- run_script.py (to run the script)
+- input.txt (sample input)
+
+How to use, auto excel filler using python script: v3
+
+newly added features:
+- fill out the form on the webpage.
+- preview the data live as you type.
+- upload a .csv file (must have headers: name,email,phone,address).
+- download a sample csv file to use as a guide.
+- add or remove rows as needed (with confirmation before deleting).
+- click generate excel to download an .xlsx file with your data.
+- works in your browser, powered by python and flask.
+
+requirements:
+- python 3.7 or newer
+- install required libraries: pip install flask openpyxl
+
+files included:
+- app.py – main backend script using flask
+- templates/form.html – webpage layout n form
+- static/main.js – handles all function
+- input.txt – sample for basic script version
+- how_to_use.txt – instructions (this file)
+
+How to use, auto excel filler using python script: v4
+
+newly added features:
+- login and signup system using Flask and PostgreSQL
+- password hashing for secure storage (via Werkzeug)
+- dashboard page after login
+- session-based user authentication
+- frontend pages
+
+How to use, auto excel filler using python script: v5
+
+newly added features:
+- drag and drop support to reorder entries visually before export.
+- live preview automatically updates with new order.
+- drag handle added to each entry for intuitive reordering.
+- all previous features retained (CSV upload, sample download, PDF export, live form, Excel generation).
+
+requirements:
+- python 3.7 or newer
+- install required libraries: pip install flask openpyxl
+- internet connection (to load Sortable.js from CDN)
+
+files included:
+- app.py – main backend script using Flask
+- templates/form.html – webpage layout and autofill form
+- static/main.js – all frontend logic (validation, drag-drop, preview, export)
+- static/style.css – styles for form, table, drag handle, and buttons
+- input.txt – sample for basic script version
+- how_to_use.txt – this instruction file
+
+How to use, auto excel filler using python script: v6
+
+

@@ -1,0 +1,4 @@
+name:ali
+email:ali@example.com
+phone:6732112621
+address: no.14,spg12, kpg kerima, ttg

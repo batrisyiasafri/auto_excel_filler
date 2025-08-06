@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Auto Excel Filler</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    </head>
+
+    <body>
+       <a href="{{ url_for('dashboard') }}" class="btn-back">← Back to Dashboard</a>
+        <h2>Fill out your info</h2>
+        <div id="loading" style="display: none; text-align: center; margin-top: 15px;">
+            <span class="spinner">Generating file...</span>
+        </div>
+        <div id="msg-popup"></div>
+        <div class="container">
+        <form id="dataForm" action="/generate" method="POST">
+            <div class="entry">
+            <label>Name</label>
+            <input type="text" name="name" required placeholder="e.g. Bat">
+            <small class="error-msg"></small>
+
+            <label>Email</label>
+            <input type="email" name="email" required title="Enter a valid email" placeholder="e.g. bat@example.com">
+            <small class="error-msg"></small>
+
+
+            <label>Phone</label>
+            <input type="text" name="phone" pattern="673\d{7}" minlength="10" maxlength="10" required title="Must start with 673 and have 7 digits after it">
+            <small class="error-msg"></small>
+
+            <label>Address</label>
+            <input type="text" name="address" required>
+            <small class="error-msg"></small>
+            </div>
+
+            <div class="button-row">
+                <button type="button" id="addAnother">Add Another</button>
+                <input type="file" id="uploadCsv" accept=".csv">
+                <button type="button" id="sampleCsv">Download sample CSV</button>
+            </div>
+
+            <div class="button-row">
+                <input type="submit" value="Generate Excel">
+                <input type="reset" value="Clear Form">
+            </div>         
+        </form>
+        <!-- preview the data before generAting -->
+         <div class="preview-container">
+        <h3>Preview: </h3>
+        <div id="preview"></div>
+        <!-- export pdf button -->
+         <div class="button-row">
+            <button type="button" id="exportPdf">Export to PDF</button>
+         </div>
+        </div>
+        </div>
+        <!-- csv parser -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+        <!-- to export pdf -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <!-- auto table -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+        <!-- sortable.js -->
+         <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+        <script src="{{url_for('static', filename='main.js')}}"></script>
+    </body>
+</html>

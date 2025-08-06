@@ -1,0 +1,4 @@
+Name,Email,Phone
+Ali,ali@example.com,6738232711
+Abu,abu@example.com,6738211601
+Sarah,sarah@example.com,6737110112
