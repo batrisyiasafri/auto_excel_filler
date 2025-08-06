@@ -1,0 +1,8 @@
+pip freeze > requirements.txt
+Flask
+Flask-Login
+Flask-SQLAlchemy
+openpyxl
+psycopg2-binary
+Werkzeug
+itsdangerous
